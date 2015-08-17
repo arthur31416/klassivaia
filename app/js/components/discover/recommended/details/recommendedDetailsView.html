@@ -1,0 +1,19 @@
+ <!-- override has-header class -->
+<ion-view view-title="{{ recommendedPiece.name }}" style="top: -93px;">
+  <ion-content>
+   <!--  <video id="example_video_1" class="video-js vjs-default-skin" controls 
+     preload="auto" width="640" height="264" autoplay="true"
+     poster="https://i.ytimg.com/vi/D0rA_tjjbhw/hqdefault.jpg" 
+     data-setup='{"techOrder":["youtube"], "src":"https://youtu.be/x8l37utZxMQ"}'>
+    </video> -->
+    <ion-list>
+      <ion-item class="item item-thumbnail-left" ng-repeat="piece in pieces" type="item-text-wrap" target="_blank" ng-click="modalVideo(piece)">
+        <img ng-src="{{ piece.youtubeCover }}" style="height: 80px; width: 120px;">
+        <h2>{{piece.name}}</h2>
+        <p>
+          {{ getComposer(piece).fullName }}<span ng-if="!isSingleTrack(piece)"> - {{ getPlaylist(piece).name }}</span>
+        </p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

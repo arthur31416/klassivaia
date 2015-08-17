@@ -1,0 +1,18 @@
+
+<ion-view view-title="Register">
+	<ion-content class="padding">
+		Email: <input type="text" ng-model="email">
+		Password: <input type="text" ng-model="password">
+
+		<br><br>
+
+		<button ng-click="createUser()">Create User</button>
+
+		<br><br>
+
+		<button ng-click="removeUser()">Remove User</button>
+
+		<p ng-if="message">Message: <strong>{{ message }}</strong></p>
+		<p ng-if="error">Error: <strong>{{ error }}</strong></p>
+	</ion-content>
+</ion-view>

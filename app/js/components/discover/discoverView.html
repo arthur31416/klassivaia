@@ -1,0 +1,36 @@
+<ion-view view-title="Discover">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios-search-strong"></button>
+  </ion-nav-buttons>
+
+  <div ng-show="isAtLevelOne()" class="tabs-striped tabs-top tabs-background-balanced tabs-color-light">
+    <div class="tabs">
+      <a ng-class="{'active': isActive('/tab/discover/recommended')}" class="tab-item" ui-sref="tab.pieces.recommended">
+        <!-- <i class="icon ion-ios-star"></i> -->
+        Recommended
+      </a>
+      <a ng-class="{'active': isActive('/tab/discover/watched')}" class="tab-item" ui-sref="tab.pieces.watched">
+        <!-- <i class="icon ion-ios-eye"></i> -->
+        Watched
+      </a>
+    </div>
+  </div>
+  <div ng-show="isAtLevelOne()" class="tabs-striped">
+    <div class="tabs">
+      <a ng-class="{'active': isActive('/tab/discover/recommended')}" class="tab-item" ui-sref="tab.pieces.recommended">
+        <i class="icon ion-star"></i>
+        Recommended
+      </a>
+      <a ng-class="{'active': isActive('/tab/discover/watched')}" class="tab-item" ui-sref="tab.pieces.watched">
+        <i class="icon ion-eye"></i>
+        Watched
+      </a>
+    </div>
+  </div>
+
+  <ion-nav-view name="tab-pieces-content" class="has-tabs-top"></ion-nav-view>
+</ion-view>
+
+
+
+

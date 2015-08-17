@@ -1,0 +1,23 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">{{ currentPiece.name }}</h1>
+    <button class="button button-clear button-primary" ng-click="modal.hide()">Cancel</button>
+  </ion-header-bar>
+  <ion-content>
+    
+    <!-- <video id="idTest" class="video-js vjs-default-skin" controls 
+         preload="auto" width="640" height="264"
+         poster="{{ daPiece.youtubeCover }}" src="{{ daPiece.youtubeUrl }}"
+         data-setup='{"techOrder":["youtube"]}'>
+    </video> -->
+
+    <!-- <video videojs class="video-js vjs-default-skin vjs-controls-enabled vjs-has-started vjs-paused vjs-user-inactive" id="idTest" src="https://youtu.be/som4dmHQasg">
+    </video> -->
+    <youtubevideo></youtubevideo>
+    <!-- <video id="idTest" class="video-js vjs-default-skin" controls preload="true" width="640" height="360"
+    data-setup='{"techOrder":["youtube","html5"],"ytcontrols":false}'>
+      <source videojs type='video/youtube' />
+    </video> -->
+
+  </ion-content>
+</ion-modal-view>

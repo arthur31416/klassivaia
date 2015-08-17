@@ -1,0 +1,17 @@
+<!-- <ion-view view-title="Discover">
+  <ion-nav-buttons side="right">
+    <button class="button button-icon icon ion-ios-search-strong"></button>
+  </ion-nav-buttons> -->
+  <ion-content style="top: 0;">
+    <ion-list>
+      <ion-item class="item item-thumbnail-left" ng-repeat="recommendedPiece in recommendedPieces" type="item-text-wrap" href="#/tab/discover/recommended/{{recommendedPiece.id}}">
+        <img ng-src="{{ getCover(recommendedPiece) }}" style="height: 80px; width: 120pxpx;">
+        <h2>{{recommendedPiece.name}}</h2>
+        <p>{{ getComposers(recommendedPiece) }}</p>
+        <ion-option-button class="button-assertive" ng-click="remove(recommendedPiece)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+<!-- </ion-view> -->

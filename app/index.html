@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/video.js/dist/video-js/video-js.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <link href="css/main.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ionic/release/js/ionic.js"></script>
+    <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/ngCordova/dist/ng-cordova.js"></script>
+    <script src="bower_components/video.js/dist/video-js/video.js"></script>
+    <script src="bower_components/videojs-youtube/dist/vjs.youtube.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--
+        <script src="cordova.js"></script>
+    -->
+
+    <!-- your app's js -->
+    <!-- build:js scripts/scripts.js -->
+   
+    <script src="js/app.js"></script>
+    
+    <!-- DISCOVER -->
+    <script src="js/components/discover/discoverController.js"></script>
+
+    <!-- DISCOVER - RECOMMENDED -->
+    <script src="js/components/discover/recommended/recommendedController.js"></script>
+    <script src="js/components/discover/recommended/recommendedService.js"></script>
+
+    <!-- DISCOVER - RECOMMENDED - DETAILS -->
+    <script src="js/components/discover/recommended/details/recommendedDetailsController.js"></script>
+     <script src="js/components/discover/recommended/details/recommendedDetailsService.js"></script>
+
+     <!-- DISCOVER - WATCHED -->
+    <script src="js/components/discover/watched/watchedController.js"></script>
+   
+    <!-- PROFILE -->
+    <script src="js/components/profile/profileController.js"></script>
+    <script src="js/components/profile/profileService.js"></script>
+
+    <!-- REGISTER -->
+    <script src="js/components/register/authFactory.js"></script>
+    <script src="js/components/register/authController.js"></script>
+
+    <!-- SHARED -->
+    <script src="js/components/shared/services/composersService.js"></script>
+    <script src="js/components/shared/services/playlistsService.js"></script>
+    <script src="js/components/shared/services/piecesService.js"></script>
+    <script src="js/components/shared/services/modalService.js"></script>
+    <script src="js/components/shared/directives/videojsDirective.js"></script>
+
+    <script src="js/configuration.js"></script>
+    <script src="js/route.js"></script>
+
+    <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+    <script>
+    videojs.options.flash.swf = "video-js.swf";
+    </script>
+
+    <!-- endbuild -->
+
+  </head>
+  <body ng-app="app">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar bar-header bar-balanced">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>
